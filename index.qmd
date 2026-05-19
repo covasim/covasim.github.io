@@ -1,16 +1,16 @@
 ---
-title: "Human papillomavirus simulator (HPVsim)"
+title: "Covasim: COVID-19 Agent-Based Simulator"
 ---
 
 ## Overview
 
-HPVsim is a flexible agent-based model for simulation HPV transmission and progression through cervical disease to cancer. The model can be parameterized with country-specific vital dynamics, structured sexual networks, co-transmitting HPV genotypes, B- and T-cell mediated immunity, and high-resolution disease natural history. HPVsim is designed with a user-first lens: it is implemented in pure Python, has built-in tools for simulating commonly-used interventions, has been extensively tested and documented, and runs in a matter of seconds to minutes on a laptop.
+Covasim is an open-source stochastic agent-based model of COVID-19 dynamics and interventions, written in Python. It is designed to project epidemic trends and evaluate intervention scenarios at scales ranging from individual cities to entire countries. Covasim incorporates demographic data, realistic transmission networks across social settings (households, schools, workplaces, communities, and long-term care facilities), age-specific disease outcomes, and viral dynamics including immunity and variants. It has been used by researchers and public health officials in over a dozen countries to inform policy decisions.
 
 <!-- external links (top) -->
 <div class="col-md-12 ml-auto mr-auto">
   <ul id="icons-links" class="text-center" style="margin-top:0px; list-style: none; padding: 0;">
     <li style="display:inline; margin: 5px;">
-      <a href="https://docs.hpvsim.org" target="_blank">
+      <a href="https://docs.idmod.org/projects/covasim/en/latest/" target="_blank">
         <button class="btn btn-primary">
           <img src="https://icongr.am/octicons/code.svg?size=30&color=ffffff" alt="Docs" style="vertical-align:middle;">
           Docs
@@ -18,7 +18,7 @@ HPVsim is a flexible agent-based model for simulation HPV transmission and progr
       </a>
     </li>
     <li style="display:inline; margin: 5px;">
-      <a href="https://docs.idmod.org/projects/hpvsim/en/v2.0.0/tutorials.html" target="_blank">
+      <a href="https://docs.idmod.org/projects/covasim/en/latest/tutorials.html" target="_blank">
         <button class="btn btn-primary">
           <img src="https://icongr.am/fontawesome/lightbulb-o.svg?size=30&color=ffffff" alt="Tutorials" style="vertical-align:middle;" height="30">
           Tutorials
@@ -26,47 +26,80 @@ HPVsim is a flexible agent-based model for simulation HPV transmission and progr
       </a>
     </li>
     <li style="display:inline; margin: 5px;">
-      <a href="https://github.com/starsimhub/hpvsim_orig" target="_blank">
+      <a href="https://github.com/starsimhub/covasim" target="_blank">
         <button class="btn btn-primary">
-          <img src="https://icongr.am/octicons/mark-github.svg?size=30&color=ffffff" alt="Code: v2.2" style="vertical-align:middle;">
-          Code: v2.2
-        </button>
-      </a>
-    </li>
-    <li style="display:inline; margin: 5px;">
-      <a href="https://github.com/starsimhub/hpvsim" target="_blank">
-        <button class="btn btn-primary">
-          <img src="https://icongr.am/octicons/mark-github.svg?size=30&color=ffffff" alt="Code: v3.0 (beta)" style="vertical-align:middle;">
-          Code: v3.0 (beta)
+          <img src="https://icongr.am/octicons/mark-github.svg?size=30&color=ffffff" alt="Code" style="vertical-align:middle;">
+          Code
         </button>
       </a>
     </li>
   </ul>
 </div>
 
-## HPVsim versions
+## Key features
 
-HPVsim was first released in mid-2022 as a fully-documented open-source Python [package](https://github.com/starsimhub/hpvsim), and model development continued until version 2.3, which was released in April 2026. In mid-2026, version 3.0 of HPVsim will be released, built on the [Starsim](https://starsim.org/) modeling architecture. The original version of HPVsim will be frozen after version 2.3, aside from any critical bugfixes.
+- **Agent-based**: Each individual in the simulated population is represented as a distinct agent with their own disease state, contacts, and history.
+- **Stochastic**: Transmission events and disease outcomes incorporate randomness, enabling uncertainty quantification across multiple runs.
+- **Realistic networks**: Transmission occurs across configurable contact layers — households, schools, workplaces, communities, and long-term care facilities.
+- **Interventions**: Supports physical distancing, mask use, testing, contact tracing, isolation, quarantine, school closures, and vaccination.
+- **Immunity and variants**: Built-in immunity module covers vaccine-derived and infection-derived immunity, waning, and multiple SARS-CoV-2 variants.
+- **Calibration**: Built-in tools for fitting the model to epidemiological data.
+- **Fast**: Realistic scenarios run in under a minute on a standard laptop.
 
 ## Publications
 
-The scientific [paper](https://doi.org/10.1371/journal.pcbi.1012181) describing HPVsim was published in 2024 in PLOS Computational Biology. The recommended citation is:
+The scientific [paper](https://doi.org/10.1371/journal.pcbi.1009149) describing Covasim was published in 2021 in PLOS Computational Biology. The recommended citation is:
 
 <div style="margin-left: 2em;">
-  **HPVsim: An agent-based model of HPV transmission and cervical disease**  (2024). Stuart RM, Cohen JA, Kerr CC, Mathur P, NDMC India, Zimmermann M, Rao DW, Boudreau MC, Lee S, Yang L, Klein DJ. *PLOS Computational Biology*, 20(7), e1012181. <https://doi.org/10.1371/journal.pcbi.1012181>
+  **Covasim: An agent-based model of COVID-19 dynamics and interventions** (2021). Kerr CC, Stuart RM, Mistry D, Abeysuriya RG, Rosenfeld K, Hart GR, Núñez RC, Cohen JA, Selvaraj P, Hagedorn B, George L, Jastrzębski M, Izzo A, Fowler G, Palmer A, Delport D, Scott N, Kelly SL, Bennette CS, Wagner BG, Chang ST, Oron AP, Wenger EA, Panovska-Griffiths J, Famulare M, Klein DJ. *PLOS Computational Biology*, 17(7): e1009149. <https://doi.org/10.1371/journal.pcbi.1009149>
 </div>
 
-Academic papers that have been written using HPVsim include:
+A companion paper describing the immunity, variants, and vaccines module is:
 
-1. **The role of HPV single-dose vaccination in expanding access in GAVI-supported countries during a period of supply constraints** (2026). Stuart RM, Theopold T, Miall N, Kobayashi E, Vernam S, Taskin T, Dull PM. *Vaccine*, 75:128187. <https://doi.org/10.1016/j.vaccine.2025.128187>
+<div style="margin-left: 2em;">
+  **Mechanistic modeling of SARS-CoV-2 immune memory, variants, and vaccines** (2021). Cohen JA, Stuart RM, Núñez RC, Wagner B, Chang ST, Rosenfeld K, Kerr CC, Famulare M, Klein DJ. *medRxiv* 2021.05.31.21258018. <https://doi.org/10.1101/2021.05.31.21258018>
+</div>
 
-2. **Can pruning improve agent-based models’ calibration? An application to HPVsim** (2025). Sturman F, Swallow B, Kerr CC, Stuart RM, Panovska-Griffiths J. *Journal of Theoretical Biology*, 21;611:112130. <https://doi.org/10.1016/j.jtbi.2025.112130>
+### Papers from the Covasim development team
 
-3. **HPV DNA Screening and Vaccination Strategies in Tunisia** (2025). Lahdhiri A, Benzina B, Ennaifer E, Tounsi H, Gzara A, Rammeh-Rommani S, Laraj O, Arfaoui H, Stuart RM, Kebir, A, BenMiled S (2025). *Sci Rep*, 15(1):27916. <https://doi.org/10.1038/s41598-025-13423-3>
+Academic papers that have used Covasim, authored by the core development team:
 
-4. **Inferring the natural history of HPV from global cancer registries: insights from a multi-country calibration** (2024). Stuart RM, Cohen JA, Abeysuriya RG, Sanz-Leon P, Kerr CC, Rao DW, Klein DJ. *Sci Rep* 14, 15875. <https://doi.org/10.1038/s41598-024-65842-3>
+1. **Determining the optimal strategy for reopening schools, the impact of test and trace interventions, and the risk of occurrence of a second COVID-19 epidemic wave in the UK: a modelling study** (2020). Panovska-Griffiths J, Kerr CC, Stuart RM, Mistry D, Klein DJ, Viner R, Bonnell C. *Lancet Child and Adolescent Health*. <https://doi.org/10.1016/S2352-4642(20)30250-9>
+
+2. **Modelling the impact of reducing control measures on the COVID-19 pandemic in a low transmission setting** (2020). Scott N, Palmer A, Delport D, Abeysuriya RG, Stuart RM, Kerr CC, Mistry D, Klein DJ, Sacks-Davis R, Heath K, Hainsworth S, Pedrana A, Stoove M, Wilson DP, Hellard M. *Medical Journal of Australia*. <https://doi.org/10.1101/2020.06.11.20127027>
+
+3. **Modelling the potential impact of mask use in schools and society on COVID-19 control in the UK** (2020). Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM, Mistry D, Foster D, Klein DJ, Viner R, Bonnell C. *Scientific Reports*. <https://doi.org/10.1038/s41598-021-88075-0>
+
+4. **Schools are not islands: Balancing COVID-19 risk and educational benefits using structural and temporal countermeasures** (2020). Cohen JA, Mistry D, Kerr CC, Klein DJ. *medRxiv* 2020.09.08.20190942. <https://doi.org/10.1101/2020.09.08.20190942>
+
+5. **COVID-19 reopening strategies at the county level in the face of uncertainty: Multiple Models for Outbreak Decision Support** (2020). Shea K, Borchering RK, Probert WJM, et al. *medRxiv* 2020.11.03.20225409. <https://doi.org/10.1101/2020.11.03.20225409>
+
+6. **Controlling COVID-19 via test-trace-quarantine** (2021). Kerr CC, Mistry D, Stuart RM, Rosenfeld K, Hart GR, Núñez RC, Selvaraj P, Cohen JA, Abeysuriya RG, George L, Hagedorn B, Jastrzębski M, Fagalde M, Duchin J, Famulare M, Klein DJ. *Nature Communications*, 12:2993. <https://doi.org/10.1038/s41467-021-23276-9>
+
+7. **The role of masks, testing and contact tracing in preventing COVID-19 resurgences: a case study from New South Wales, Australia** (2021). Stuart RM, Abeysuriya RG, Kerr CC, Mistry D, Klein DJ, Gray R, Hellard M, Scott N. *BMJ Open*. <https://doi.org/10.1101/2020.09.02.20186742>
+
+8. **Estimating and mitigating the risk of COVID-19 epidemic rebound associated with reopening of international borders in Vietnam: a modelling study** (2021). Pham QD, Stuart RM, Nguyen TV, Luong QC, Tran DQ, Phan LT, Dang TQ, Tran DN, Mistry D, Klein DJ, Abeysuriya RG, Oron AP, Kerr CC. *Lancet Global Health*. <https://doi.org/10.1016/S2214-109X(21)00103-0>
+
+9. **Modelling the impact of reopening schools in early 2021 in the presence of the new SARS-CoV-2 variant in the UK** (2021). Panovska-Griffiths J, Kerr CC, Waites W, Stuart RM, Mistry D, Foster D, Klein DJ, Viner R, Bonnell C. *medRxiv* 2021.02.07.21251287. <https://doi.org/10.1101/2021.02.07.21251287>
+
+10. **Preventing a cluster from becoming a new wave in settings with zero community COVID-19 cases** (2022). Abeysuriya RG, Delport D, Stuart RM, Sacks-Davis R, Kerr CC, Mistry D, Klein DJ, Hellard M, Scott N. *BMC Infectious Diseases*, 22(1):1–5. <https://doi.org/10.1186/s12879-022-07180-1>
+
+### Papers from external authors
+
+Academic papers from researchers outside the core team that have used Covasim:
+
+1. **Partial lockdown on unvaccinated individuals promises breaking of fourth COVID-19 wave in Bavaria** (2021). Krebs T, Moeckel MJ. *medRxiv* 2021.11.28.21266959. <https://doi.org/10.1101/2021.11.28.21266959>
+
+2. **Returning to a normal life via COVID-19 vaccines in the United States: a large-scale agent-based simulation study** (2021). Li J, Giabbanelli P. *JMIR Medical Informatics*, 9(4):e27419.
+
+3. **An agent-based model to assess large-scale COVID-19 vaccination campaigns for the Italian territory: the case study of Lombardy region** (2022). Cattaneo A, Vitali A, Mazzoleni M, Previdi F. *Computer Methods and Programs in Biomedicine*, 224:107029.
+
+4. **Estimation of local time-varying reproduction numbers in noisy surveillance data** (2022). Li W, Bulekova K, Gregor B, White LF, Kolaczyk ED. *Philosophical Transactions of the Royal Society A*, 380(2233):20210303.
+
+5. **A simulation-deep reinforcement learning (SiRL) approach for epidemic control optimization** (2022). Bushaj S, Yin X, Beqiri A, Andrews D, Büyüktahtakın İE. *Annals of Operations Research*.
 
 ## Contact
+
 If you have questions or would like to collaborate, please get in touch!
 
-<a href="mailto:info@hpvsim.info" class="btn btn-primary" role="button">Email Us</a>
+<a href="mailto:info@covasim.org" class="btn btn-primary" role="button">Email Us</a>
