@@ -1,2 +1,3 @@
-# hpvsim.github.io
-HPVsim website
+# covasim.github.io
+
+Covasim website

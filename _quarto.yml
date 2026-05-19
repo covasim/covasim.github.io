@@ -11,7 +11,7 @@ resources:
   - CNAME
 
 website:
-  title: "HPVsim"
+  title: "Covasim"
   navbar:
     logo: starsim-logo-dark.png
     search: true
@@ -19,9 +19,9 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href:  https://github.com/starsimhub/hpvsim
+            href:  https://github.com/starsimhub/covasim
           - text: Report a Bug
-            href:  https://github.com/starsimhub/hpvsim/issues
+            href:  https://github.com/starsimhub/covasim/issues
   page-footer:
     left: |
       [Privacy and Cookies Notice](https://www.gatesfoundation.org/Privacy-and-Cookies-Notice) |
@@ -30,12 +30,12 @@ website:
       © 2022–2025, Gates Foundation. All rights reserved.
     right:
       - icon: github
-        href: https://github.com/starsimhub/hpvsim
+        href: https://github.com/starsimhub/covasim
         aria-label: GitHub
       - icon: envelope-at-fill
-        href: mailto:info@hpvsim.org
+        href: mailto:info@covasim.org
       - icon: globe
-        href: https://hpvsim.org/
+        href: https://covasim.org/
 
 execute:
   freeze: auto
