@@ -10,7 +10,7 @@ Covasim is an open-source stochastic agent-based model of COVID-19 dynamics and 
 <div class="col-md-12 ml-auto mr-auto">
   <ul id="icons-links" class="text-center" style="margin-top:0px; list-style: none; padding: 0;">
     <li style="display:inline; margin: 5px;">
-      <a href="https://docs.idmod.org/projects/covasim/en/latest/" target="_blank">
+      <a href="https://docs.covasim.org" target="_blank">
         <button class="btn btn-primary">
           <img src="https://icongr.am/octicons/code.svg?size=30&color=ffffff" alt="Docs" style="vertical-align:middle;">
           Docs
@@ -18,7 +18,7 @@ Covasim is an open-source stochastic agent-based model of COVID-19 dynamics and 
       </a>
     </li>
     <li style="display:inline; margin: 5px;">
-      <a href="https://docs.idmod.org/projects/covasim/en/latest/tutorials.html" target="_blank">
+      <a href="https://https://docs.covasim.org/tutorials" target="_blank">
         <button class="btn btn-primary">
           <img src="https://icongr.am/fontawesome/lightbulb-o.svg?size=30&color=ffffff" alt="Tutorials" style="vertical-align:middle;" height="30">
           Tutorials
