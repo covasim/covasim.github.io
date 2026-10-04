@@ -9,6 +9,7 @@ format:
 
 resources:
   - CNAME
+  - "assets/icons/**/*.svg"
 
 website:
   title: "Covasim"
